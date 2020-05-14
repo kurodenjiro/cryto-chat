@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.chatcrypt.com/sitemap.xml

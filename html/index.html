@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="theme-color" content="#00ff00" />
+  <title>CHATCRYPT | Secure group chat</title>
+  <meta name="description" content="Providing real end-to-end encrypted group chat without any sacrifice in security. The unmatched tri-layer encryption ensures all participants privacy." />
+  <meta property="fb:app_id" content="404872252918582" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CHATCRYPT.COM" />
+  <meta property="og:url" content="https://www.chatcrypt.com/" />
+  <meta property="og:title" content="CHATCRYPT | Secure group chat" />
+  <meta property="og:image" content="https://www.chatcrypt.com/assets/images/facebook.jpg" />
+  <meta property="og:image:alt" content="CHATCRYPT" />
+  <meta property="og:description" content="Providing real end-to-end encrypted group chat without any sacrifice in security. The unmatched tri-layer encryption ensures all participants privacy." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="google-site-verification" content="Dmqj47gqCL88tj6mPbk64OR8P1q9TkNrrwJ3o4g5VvM" />
+  <meta name="keywords" content="chatcrypt, secure, encrypted, group, chat" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.chatcrypt.com/" />
+  <link rel="icon" type="image/png" href="/assets/images/icon32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/assets/images/icon16.png" sizes="16x16" />
+  <link rel="stylesheet" property="stylesheet" href="/assets/styles/bundle_index.css?v=3" />
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.chatcrypt.com/",
+    "name": "CHATCRYPT | Secure group chat",
+    "description" : "Providing real end-to-end encrypted group chat without any sacrifice in security. The unmatched tri-layer encryption ensures all participants privacy.",
+    "keywords": "chatcrypt, secure chat, encrypted chat, group chat",
+    "inLanguage": "English",
+    "dateCreated": 2011,
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+<body>
+  <div class="wrapper green">
+    <div class="header">
+      <h1>The safest way of group chatting.</h1>
+      <h2>Providing real <b>end-to-end encrypted</b> group chat. The unmatched<br /><b>tri-layer encryption</b> ensures that no one can read your messages<br />except the participants who shares the same secret password.</h2>
+    </div>
+  </div>
+  <div class="wrapper">
+    <nav><a href="#chat">LET'S CHAT SECURE!</a><a href="#works">HOW IT WORKS?</a><a href="#thanks">SPECIAL THANKS...</a></nav>
+    <h3 id="chat">Things to know before creating a group chat</h3>
+    <p>Choose a complex secret password, then share it with the persons who you would like to chat with - preferably via phone, but for paranoid security level you should meet them face-to-face and remove batteries from all cell phones during the conversation.</p>
+    <p>The group's name and password have to be the same for all participants, username can be anything. Group name and username doesn't have to be handled as a secret information, unlike the password.</p>
+    <a href="javascript:return;" class="chat" onclick="window.open('/chat.html','CHATCRYPT','menubar=0,resizable=1,status=0,toolbar=0,width=728,height=512');">&gt; ENTER CHATCRYPT &lt;</a>
+    <div class="fb-like" data-href="https://www.chatcrypt.com/" data-layout="button_count" data-action="recommend" data-size="small" data-show-faces="false" data-share="true"></div>
+    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5731759959350149" data-ad-slot="4870728164"></ins>
+    <h3 id="works">Let's take a look at the inner workings</h3>
+    <p>CHATCRYPT's unique tri-layer encryption starts with a traditional secured <a href="https://en.wikipedia.org/wiki/WebSocket" target="_blank" rel="external nofollow">WebSocket</a> (wss) connection to the application server, then it builds up a custom <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank" rel="external nofollow">Transport Layer Security</a> within it, using <a href="https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman" target="_blank" rel="external nofollow">ECDH</a> (with <a href="https://pdfs.semanticscholar.org/ac3c/28ebf9a40319202b3c4f64cc81cdaf193da5.pdf" target="_blank" rel="external nofollow">NIST P-521</a> curve) for key exchange and <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank" rel="external nofollow">AES-256</a> (in <a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Counter_.28CTR.29" target="_blank" rel="external nofollow">CTR</a> mode) for ciphering. On this second layer the messages sent from the server are signed with <a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm" target="_blank" rel="external nofollow">ECDSA</a> (using <a href="https://ed25519.cr.yp.to/" target="_blank" rel="external nofollow">ED25519</a> curve) and verified with a public key at the client. This layer is responsible for that even transparent proxies with own CA certificates installed on the client cannot inspect or modify the communication (surely only if they didn't modify the chat client's source code - development of a browser extension and a smartphone app is planned).</p>
+    <p>The third layer inside the second one is responsible for the <a href="https://en.wikipedia.org/wiki/End-to-end_encryption" target="_blank" rel="external nofollow">End-to-end encryption</a> between the clients. They build up individual TLS connections with each other within a group, once again using ECDH (but now with <a href="https://cr.yp.to/ecdh.html" target="_blank" rel="external nofollow">Curve25519</a> curve) for key exchange and AES-256 (in CTR mode) for ciphering. Most importantly their ECDH shared keys are <a href="https://en.wikipedia.org/wiki/Exclusive_or" target="_blank" rel="external nofollow">XOR</a>ed with the <a href="https://en.wikipedia.org/wiki/SHA-2" target="_blank" rel="external nofollow">SHA-256</a> hashed group password, which results in that their communication cannot be deciphered via participants using another password - if multiple groups being created under the same name but with different passwords, then each group member will be visible only to the ones that entered with the common one.</p>
+    <p>Thanks to the third layer's encryption and to the group password that never leaves the client, it is not possible to decode the messages even on server side. It acts as a dummy router between the group members and does not store any data it passes. The server's source code is available upon a well-founded request.</p>
+    <h3 id="thanks">Being grateful to the developers of the following packages</h3>
+    <p><a href="https://github.com/indutny/elliptic" target="_blank" rel="external nofollow">Fast elliptic-curve cryptography in a plain JavaScript implementation.</a></p>
+    <p><a href="https://github.com/ricmoo/aes-js" target="_blank" rel="external nofollow">A pure JavaScript implementation of the AES block cipher algorithm.</a></p>
+    <p><a href="https://github.com/emn178/js-sha256" target="_blank" rel="external nofollow">A simple SHA-256 / SHA-224 hash function for JavaScript.</a></p>
+    <p><a href="https://github.com/websockets/ws" target="_blank" rel="external nofollow">Blazing fast and thoroughly tested WebSocket client and server for Node.js.</a></p>
+    <p><a href="https://github.com/kelektiv/node-uuid" target="_blank" rel="external nofollow">Generate RFC-compliant UUIDs in JavaScript.</a></p>
+    <h3>Privacy policy</h3>
+    <p>The privacy of our visitors is of extreme importance to us. This section outlines the types of personal information is received and collected by this website and how it is used.</p>
+    <p>This website makes use of log files. The information inside the log files includes internet protocol (IP) addresses, type of browser, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user's movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.</p>
+    <p>We also use cookies provided by trusted third parties. Let's see which third party cookies you might encounter through this site.</p>
+    <p>This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content.</p>
+    <p>This site also uses Google AdSense, a Google Inc. advertising service. Its cookies are stored on your computer and which allow an analysis of the use of the website. Google AdSense also uses so-called Web Beacons (invisible graphics). Through these web beacons, information such as visitor traffic on these pages can be evaluated.</p>
+    <h3>Data retention</h3>
+    <p>Google Analytics on this website is set to store data that is associated with cookies, user identifiers, or advertising identifiers for up to 14 months (currently the lowest option).</p>
+    <p>Web server log files are deleted after 90 days.</p>
+    <p>If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at <a href="mailto:contact@chatcrypt.com">contact@chatcrypt.com</a>.</p>
+    <p class="footer">©2011-2017 | Contact: <a href="mailto:contact@chatcrypt.com">contact@chatcrypt.com</a></p>
+    <p class="footer"><b>Partner sites:</b> <a href="https://www.ratingraph.com/" target="_blank" rel="external">TV Series and Movie Sequels Rating Graph</a> | <a href="https://www.funpic.us/" target="_blank" rel="external">Funny Pictures</a> | <a href="https://www.buyxiaomimi6.com/" target="_blank" rel="external">Buy Xiaomi Mi 6</a></p>
+    <p class="footer"><b>This website uses cookies.</b> We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. You consent to our cookies if you continue to use this website.</p>
+  </div>
+  <div id="fb-root"></div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110542528-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-110542528-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=404872252918582';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,685 @@
+
+/* ========
+    BASICS
+   ======== */
+
+html, body {
+  color: rgba(0,255,0,1);
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  font-size: 14px;
+  min-width: 480px;
+  min-height: 480px;
+  font-style: normal;
+  text-align: left;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: normal;
+  line-height: normal;
+  background-color: rgba(0,0,0,1);
+}
+
+html.white, body.white {
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+}
+
+html.yellow, body.yellow {
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,192,0,1);
+}
+
+html * {
+  max-height: 999999px;
+}
+
+a,
+ul,
+li,
+img,
+input,
+button,
+button:hover,
+button:active,
+button:focus,
+textarea {
+  resize: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+div.clear {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: relative;
+}
+
+::-webkit-input-placeholder {
+  color: #00ff00;
+  opacity: 1;
+}
+
+.white::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.yellow::-webkit-input-placeholder {
+  color: #000000;
+}
+
+::-moz-placeholder {
+  color: #00ff00;
+  opacity: 1;
+}
+
+.white::-moz-placeholder {
+  color: #000000;
+}
+
+.yellow::-moz-placeholder {
+  color: #000000;
+}
+
+:-moz-placeholder {
+  color: #00ff00;
+  opacity: 1;
+}
+
+.white:-moz-placeholder {
+  color: #000000;
+}
+
+.yellow:-moz-placeholder {
+  color: #000000;
+}
+
+::-ms-input-placeholder {
+  color: #00ff00;
+  opacity: 1;
+}
+
+.white::-ms-input-placeholder {
+  color: #000000;
+}
+
+.yellow::-ms-input-placeholder {
+  color: #000000;
+}
+
+:-ms-input-placeholder {
+  color: #00ff00;
+  opacity: 1;
+}
+
+.white:-ms-input-placeholder {
+  color: #000000;
+}
+
+.yellow:-ms-input-placeholder {
+  color: #000000;
+}
+
+.noselect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+.blur {
+  filter: blur(1px);
+  -ms-filter: blur(1px);
+  -o-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+/* ===============
+    ADVERTISEMENT
+   =============== */
+
+div#advertisement {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: auto;
+  width: auto;
+  height: 90px;
+  margin: 0px;
+  padding: 0px;
+  z-index: 150;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,255,0,1);
+}
+
+div#advertisement.white {
+  border-bottom: 1px solid rgba(0,0,0,1);
+}
+
+div#advertisement.yellow {
+  border-bottom: 1px solid rgba(0,0,0,1);
+}
+
+div#advertisement span {
+  width: 728px;
+  height: 90px;
+  margin: 0px auto;
+  padding: 0px;
+  display: block;
+  position: relative;
+}
+
+/* ======
+    CHAT
+   ====== */
+
+div#chat {
+  display: none;
+}
+
+div#chat div.conversation {
+  top: 91px;
+  left: 0px;
+  right: 160px;
+  bottom: 103px;
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 6px 8px 0px 8px;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  overflow-y: auto;
+  border-right: 1px solid rgba(0,255,0,1);
+}
+
+div#chat div.conversation.white {
+  border-right: 1px solid rgba(0,0,0,1);
+}
+
+div#chat div.conversation.yellow {
+  border-right: 1px solid rgba(0,0,0,1);
+}
+
+div#chat div.conversation div.message {
+  color: rgba(0,255,0,1);
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: relative;
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+div#chat div.conversation div.message.white {
+  color: rgba(0,0,0,1);
+}
+
+div#chat div.conversation div.message.yellow {
+  color: rgba(0,0,0,1);
+}
+
+div#chat div.conversation div.message:last-of-type {
+  margin-bottom: 6px;
+}
+
+div#chat div.conversation div.message sub {
+  color: rgba(0,0,0,1);
+  margin: 0px 0px 0px 4px;
+  padding: 0px 2px;
+  font-size: 10px;
+  line-height: 0px;
+  border-radius: 2px;
+  background-color: rgba(0,255,0,1);
+}
+
+div#chat div.conversation div.message.white sub {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#chat div.conversation div.message.yellow sub {
+  color: rgba(255,192,0,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#chat div.members {
+  top: 91px;
+  left: auto;
+  right: 0px;
+  bottom: 103px;
+  width: 160px;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+div#chat div.members span {
+  color: rgba(0,0,0,1);
+  width: auto;
+  height: 34px;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: relative;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  line-height: 34px;
+  background-color: rgba(0,255,0,1);
+}
+
+div#chat div.members span.white {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#chat div.members span.yellow {
+  color: rgba(255,192,0,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#chat div.members div.member {
+  color: rgba(0,255,0,1);
+  width: auto;
+  height: 34px;
+  margin: 0px;
+  padding: 0px 8px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: normal;
+  line-height: 34px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+div#chat div.members div.member.white {
+  color: rgba(0,0,0,1);
+}
+
+div#chat div.members div.member.yellow {
+  color: rgba(0,0,0,1);
+}
+
+div#chat div.input {
+  top: auto;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: auto;
+  height: 102px;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: absolute;
+  border-top: 1px solid rgba(0,255,0,1);
+}
+
+div#chat div.input.white {
+  border-top: 1px solid rgba(0,0,0,1);
+}
+
+div#chat div.input.yellow {
+  border-top: 1px solid rgba(0,0,0,1);
+}
+
+div#chat div.input span {
+  top: 0px;
+  left: 0px;
+  right: 118px;
+  bottom: 0px;
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: absolute;
+}
+
+div#chat div.input span textarea[name="message"] {
+  color: rgba(0,255,0,1);
+  width: 100%;
+  height: 90px;
+  border: none;
+  margin: 0px;
+  padding: 6px 8px;
+  display: block;
+  position: relative;
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: normal;
+  line-height: 18px;
+  background-color: rgba(0,0,0,1);
+}
+
+div#chat div.input span textarea[name="message"].white {
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+}
+
+div#chat div.input span textarea[name="message"].yellow {
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,192,0,1);
+}
+
+div#chat div.input button {
+  top: 0px;
+  left: auto;
+  right: 0px;
+  bottom: auto;
+  color: rgba(0,0,0,1);
+  width: 102px;
+  height: 102px;
+  cursor: pointer;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: absolute;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  line-height: 102px;
+  background-color: rgba(0,255,0,1);
+}
+
+div#chat div.input button.white {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#chat div.input button.yellow {
+  color: rgba(255,192,0,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#chat div.input button:hover,
+div#chat div.input button:focus {
+  text-decoration: underline;
+}
+
+/* =============
+    CREDENTIALS
+   ============= */
+
+div#credentials {
+  top: 50%;
+  left: 50%;
+  color: rgba(0,255,0,1);
+  width: 318px;
+  height: 242px;
+  border: 1px solid rgba(0,255,0,1);
+  margin: -77px 0px 0px -160px;
+  padding: 0px;
+  z-index: 50;
+  display: block;
+  position: absolute;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  line-height: normal;
+  background-color: rgba(0,0,0,1);
+}
+
+div#credentials.white {
+  color: rgba(0,0,0,1);
+  border: 1px solid rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+}
+
+div#credentials.yellow {
+  color: rgba(0,0,0,1);
+  border: 1px solid rgba(0,0,0,1);
+  background-color: rgba(255,192,0,1);
+}
+
+div#credentials > span {
+  color: rgba(0,0,0,1);
+  width: 318px;
+  height: 38px;
+  margin: 0px 0px 4px 0px;
+  padding: 0px;
+  display: block;
+  position: relative;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  line-height: 38px;
+  background-color: rgba(0,255,0,1);
+}
+
+div#credentials > span.white {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#credentials > span.yellow {
+  color: rgba(255,192,0,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#credentials input[type="text"],
+div#credentials input[type="password"],
+div#credentials button {
+  color: rgba(0,255,0,1);
+  width: 296px;
+  height: 32px;
+  border: 1px solid rgba(0,255,0,1);
+  margin: 4px;
+  padding: 0px 6px;
+  display: block;
+  position: relative;
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: normal;
+  line-height: normal;
+  background-color: rgba(0,0,0,1);
+}
+
+div#credentials input[type="text"].white,
+div#credentials input[type="password"].white {
+  color: rgba(0,0,0,1);
+  border: 1px solid rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+}
+
+div#credentials input[type="text"].yellow,
+div#credentials input[type="password"].yellow {
+  color: rgba(0,0,0,1);
+  border: 1px solid rgba(0,0,0,1);
+  background-color: rgba(255,192,0,1);
+}
+
+div#credentials button {
+  color: rgba(0,0,0,1);
+  width: 310px;
+  height: 34px;
+  cursor: pointer;
+  padding: 0px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 32px;
+  background-color: rgba(0,255,0,1);
+}
+
+div#credentials button.white {
+  color: rgba(255,255,255,1);
+  border: 1px solid rgba(0,0,0,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#credentials button.yellow {
+  color: rgba(255,192,0,1);
+  border: 1px solid rgba(0,0,0,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#credentials button:hover,
+div#credentials button:focus {
+  text-decoration: underline;
+}
+
+div#credentials input[type="text"].error,
+div#credentials input[type="password"].error {
+  border: 1px solid rgba(255,0,0,1);
+}
+
+div#credentials div.strength {
+  width: 308px;
+  height: 4px;
+  border: 1px solid rgba(0,255,0,1);
+  margin: 4px;
+  padding: 0px;
+  display: block;
+  position: relative;
+  text-align: left;
+}
+
+div#credentials div.strength.white {
+  border: 1px solid rgba(0,0,0,1);
+}
+
+div#credentials div.strength.yellow {
+  border: 1px solid rgba(0,0,0,1);
+}
+
+div#credentials div.strength div.bar {
+  width: 0px;
+  height: 2px;
+  margin: 1px;
+  padding: 0px;
+  display: block;
+  position: relative;
+  background-color: rgba(255,0,0,1);
+}
+
+div#credentials div.theme {
+  color: rgba(0,255,0,1);
+  width: 310px;
+  height: 34px;
+  border: none;
+  margin: 4px;
+  padding: 0px;
+  display: block;
+  position: relative;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: normal;
+  line-height: 34px;
+  background-color: rgba(0,0,0,1);
+}
+
+div#credentials div.theme.white {
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+}
+
+div#credentials div.theme.yellow {
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,192,0,1);
+}
+
+div#credentials div.theme span {
+  cursor: pointer;
+}
+
+div#credentials div.theme span:hover,
+div#credentials div.theme span:focus {
+  text-decoration: underline;
+}
+
+/* ========================
+    LOADING AND CONNECTING
+   ======================== */
+
+div#loading,
+div#connecting {
+  top: 90px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: auto;
+  height: auto;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  z-index: 100;
+  display: block;
+  position: absolute;
+  background-color: rgba(0,0,0,0);
+}
+
+div#connecting {
+  display: none;
+}
+
+div#loading span,
+div#connecting span {
+  top: 50%;
+  left: 50%;
+  color: rgba(0,0,0,1);
+  width: 240px;
+  height: 80px;
+  margin: -40px 0px 0px -120px;
+  padding: 0px;
+  display: block;
+  position: absolute;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  line-height: 80px;
+  background-color: rgba(0,255,0,1);
+}
+
+div#loading span.white,
+div#connecting span.white {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,1);
+}
+
+div#loading span.yellow,
+div#connecting span.yellow {
+  color: rgba(255,192,0,1);
+  background-color: rgba(0,0,0,1);
+}

@@ -1,0 +1,260 @@
+
+/* ========
+    BASICS
+   ======== */
+
+html, body {
+  color: rgba(0,255,0,1);
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  font-size: 14px;
+  min-width: 768px;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: normal;
+  line-height: normal;
+  background-color: rgba(0,0,0,1);
+}
+
+html * {
+  max-height: 999999px;
+}
+
+a,
+ul,
+li,
+img,
+input,
+button,
+button:hover,
+button:active,
+button:focus,
+textarea {
+  resize: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+div.clear {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: relative;
+}
+
+::-webkit-input-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {  
+  color: #ffffff;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {  
+  color: #ffffff;
+  opacity: 1;
+}
+
+.noselect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+/* =========
+    WRAPPER
+   ========= */
+
+div.wrapper {
+  width: 760px;
+  height: auto;
+  margin: 0px auto;
+  padding: 0px;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+div.wrapper.green {
+  width: 100%;
+  background-color: rgba(0,255,0,1);
+}
+
+div.wrapper h3 {
+  color: rgba(0,255,0,1);
+  width: auto;
+  height: auto;
+  margin: 28px 0px 14px 0px;
+  padding: 0px;
+  display: block;
+  position: relative;
+  font-size: 17px;
+  font-style: normal;
+  text-align: left;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  line-height: normal;
+}
+
+div.wrapper p {
+  color: rgba(0,255,0,1);
+  width: auto;
+  height: auto;
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+  display: block;
+  position: relative;
+  font-size: 15px;
+  font-style: normal;
+  text-align: justify;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+div.wrapper p.footer {
+  margin: 28px 0px;
+  text-align: center;
+}
+
+div.wrapper p a {
+  color: rgba(0,255,0,1);
+  font-style: italic;
+  text-decoration: none;
+}
+
+div.wrapper p a:hover,
+div.wrapper p a:focus {
+  text-decoration: underline;
+}
+
+div.wrapper a.chat {
+  color: rgba(0,0,0,1);
+  width: 240px;
+  height: 60px;
+  margin: 14px auto;
+  padding: 0px;
+  display: block;
+  position: relative;
+  font-size: 18px;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  line-height: 60px;
+  text-decoration: none;
+  background-color: rgba(0,255,0,1);
+}
+
+div.wrapper a.chat:hover,
+div.wrapper a.chat:focus {
+  text-decoration: underline;
+}
+
+div.wrapper div.fb-like {
+  margin-bottom: 14px;
+}
+
+/* ========
+    HEADER
+   ======== */
+
+div.header {
+  width: 760px;
+  height: 230px;
+  margin: 0px auto;
+  padding: 0px;
+  display: block;
+  position: relative;
+  background-size: auto;
+  background-image: url(/assets/images/header.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+div.header h1,
+div.header h2 {
+  top: 62px;
+  left: 0px;
+  color: rgba(0,0,0,1);
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: absolute;
+  font-size: 28px;
+  font-style: normal;
+  text-align: left;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  line-height: normal;
+}
+
+div.header h2 {
+  top: 100px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+/* ============
+    NAVIGATION
+   ============ */
+
+nav {
+  width: 760px;
+  height: 40px;
+  margin: 14px 0px 0px 0px;
+  padding: 0px;
+  display: block;
+  position: relative;
+  background-color: rgba(0,255,0,1);
+}
+
+nav a {
+  color: rgba(0,0,0,1);
+  width: 252px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight: bold;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+nav a:first-of-type {
+  margin-left: 2px;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
